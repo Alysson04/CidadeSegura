@@ -3,31 +3,37 @@ h2{
     color: rgb(0, 0, 0);
 }
 .frase{
-    font-size: 30px;
+    font-size: 40px;
     color: gray;
 }
 .slogan{
     color: #4AB1B8;
+    
 }
 .destaque{
     color: #000000;
 }
-.App{
+.content{
     font-family: "Montserrat", sans-serif;
-    color:#4AB1B8;;
-    text-align: center;
+    color:#4AB1B8;
     background-color: #ffffff;
-    
+    height:70vh;
+    position: relative;
+    transform: translateY(-100px);
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+}
+.textoInicio{
+  transform: translateY(170px);
+  
+  
 }
 
 .destaque{
     color:black
 
 }
-.content {
-    margin-top: 5%
-    
-  }
+
   h1{
     font-size: 50px;
   }
@@ -38,4 +44,36 @@ h2{
   
 body{
   margin: 0;
+}
+.containerInicio{
+  background-color: #a79d9d;
+  width: 100vw;
+  height: 100vh;
+}
+.imagem1,.imagem2,.imagem3,.imagem4{
+ width: 70%;
+ height: 50%;
+ float: right;
+}
+.parteDeBaixo{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+}
+.esquerda{
+  background-color: rgb(156, 146, 146);
+  height: 100vh;
+  width: 50vw;
+}
+.meio{
+  height: 100px;
+  width: 50px;
+
+}
+.direita{
+  background-color: rgb(109, 104, 104);
+  height: 100vh;
+  width: 50vw;
+ 
 }

@@ -9,6 +9,7 @@ import carlos from '../../img/carlos.jpeg'
 import giullia from '../../img/giullia.jpeg'
 import linkedin from '../../img/linkedin.jpg'
 import { background } from '@chakra-ui/react';
+import "./CarrosselSobrenos.css"
 
 
 
