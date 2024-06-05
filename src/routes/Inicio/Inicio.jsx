@@ -1,6 +1,6 @@
 import React from "react";
 import './Inicio.css';
-import Carrossel from '../../assets/components/Carrossel/CarrosselHome';
+
 import Navbar from '../../assets/components/Navbar/Navbar';
 import imagem1 from '../../assets/img/imagem1.jpg'
 
@@ -25,7 +25,8 @@ return (
   <div className="esquerda">
     
   <img src={imagem1} className="imagem1"></img>
-  <h3>Com o Cidade Segura, monitore incidentes em tempo real e ajude a tornar sua cidade um lugar mais seguro para todos.</h3>
+  <h4>Com o Cidade Segura, monitore incidentes em tempo real e ajude a tornar sua cidade um lugar mais seguro para todos.</h4>
+
       
     </div>
     <div className="meio"></div>
