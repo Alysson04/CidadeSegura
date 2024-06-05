@@ -23,6 +23,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import { Button } from '@mui/material';
 import './TelaPrincipal.css';
 import { Link } from "react-router-dom";
+import Mapa from '../../assets/components/Mapa/Mapa.jsx'
 
 
 const drawerWidth = 240;
@@ -138,7 +139,7 @@ export default function PersistentDrawerLeft() {
         </List>
         <Divider />
         <List>
-          {['Configurações'].map((text, index) => (
+          {['Configuração'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -159,7 +160,11 @@ export default function PersistentDrawerLeft() {
       
         </Typography>
       </Main>
+      
     </Box>
+    <div>
+      <Mapa/>
+    </div>
     <div className='divButton'>  <Link to="/Report"> <button className='button'>Reportar</button>
     </Link></div>
   
