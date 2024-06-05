@@ -1,0 +1,41 @@
+
+h2{
+    color: rgb(0, 0, 0);
+}
+.frase{
+    font-size: 30px;
+    color: gray;
+}
+.slogan{
+    color: #4AB1B8;
+}
+.destaque{
+    color: #000000;
+}
+.App{
+    font-family: "Montserrat", sans-serif;
+    color:#4AB1B8;;
+    text-align: center;
+    background-color: #ffffff;
+    
+}
+
+.destaque{
+    color:black
+
+}
+.content {
+    margin-top: 5%
+    
+  }
+  h1{
+    font-size: 50px;
+  }
+  h2{
+    font-size: 50px;
+ 
+  }
+  
+body{
+  margin: 0;
+}
