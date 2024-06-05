@@ -16,7 +16,7 @@ h2{
 .content{
     font-family: "Montserrat", sans-serif;
     color:#4AB1B8;
-    background-color: #ffffff;
+    background-color: #d6d2d2;
     height:70vh;
     position: relative;
     transform: translateY(-100px);
@@ -51,42 +51,65 @@ body{
   width: 100vw;
   height: 100vh;
 }
-.imagem1,.imagem2,.imagem3,.imagem4{
+.imagem1,.imagem2{
  width: 70%;
  height: 50%;
  float: right;
  border-radius: 10%;
  filter: brightness(80%);
+ margin-bottom: 10%;
  
+}
+.imagem3,.imagem4{
+  width: 70%;
+  height: 50%;
+  float: left;
+  border-radius: 10%;
+  filter: brightness(80%);
+  margin-top: 10%;
+
 }
 .parteDeBaixo{
   display: flex;
   height: 100vh;
-  width: 100vw;
+  width: 99vw;
 
 }
 .esquerda{
   background-color: rgb(255, 255, 255);
   height: 100vh;
   width: 50vw;
+ 
 
 }
 .meio{
   height: 100px;
-  width: 50px;
+  width: 5vw;
 
 }
 .direita{
-  background-color: rgb(109, 104, 104);
+  background-color: rgb(255, 255, 255);
   height: 100vh;
   width: 50vw;
  
 }
-h4{
+.t1,.t2{
   color: #000000;
-  font-size: 200%;
+  font-size: 300%;
   float: right;
+  text-align: right;
+  
  
 
 }
+.t3,.t4{
+  color: #000000;
+  font-size: 300%;
+  float: left;
+  text-align: left;
+
+}
+
+
+
 
