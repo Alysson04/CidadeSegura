@@ -6,13 +6,29 @@ import imagem1 from '../../assets/img/imagem1.jpg'
 import imagem2 from '../../assets/img/imagem2.jpg'
 import imagem3 from '../../assets/img/imagem3.jpg'
 import imagem4 from '../../assets/img/imagem4.jpg'
+import { useTranslation } from "react-i18next";
 
 
 
 const Home = () => {
+  const{ t, i18n: {changeLanguage, language} }= useTranslation()
+
+
+  const[currentlanguage, setCurrentLanguage] = useState('en')
+
+  const handleChangeLanguage = () =>{
+    const newLanguage = currentlanguage === 'en' ? 'pt' : 'en'
+    changeLanguage(newLanguage)
+    setCurrentLanguage(newLanguage)
+  }
+ 
+
 return (
 <>
 <Navbar/>
+<h1>{t('header')}</h1>
+<button type="button" onClick={handleChangeLanguage}>Change Language</button>
+
 
         <div className="content">
           <div className="textoInicio">
