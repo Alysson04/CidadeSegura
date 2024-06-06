@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
+
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-control-geocoder/dist/Control.Geocoder.css';
@@ -107,7 +107,7 @@ const Mapa = () => {
   
   return (
     <div>
-      <Navbar />
+  
       <div style={{ marginBottom: '20px' }}>
         <button className="my-location-button" onClick={handleMyLocationClick}>Minha localização atual</button>
         <button className="geocode-button" onClick={handleGeocode}>Buscar</button>
