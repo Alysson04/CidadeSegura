@@ -11,31 +11,9 @@ import imagem4 from '../../assets/img/imagem4.jpg'
 
 
 const Home = () => {
-<<<<<<< HEAD
-  const{ t, i18n: {changeLanguage, language} }= useTranslation()
-
-
-  const[currentlanguage, setCurrentLanguage] = useState(language)
-
-  const handleChangeLanguage = () =>{
-    const newLanguage = currentlanguage === 'en' ? 'pt' : 'en'
-    changeLanguage(newLanguage)
-    setCurrentLanguage(newLanguage)
-  }
- 
-
 return (
 <>
 <Navbar/>
-
-<button type="button" onClick={handleChangeLanguage}>Change Language</button>
-
-=======
-return (
-<>
-<Navbar/>
->>>>>>> parent of 81ec8b3 (tentativa de tradução)
-
         <div className="content">
           <div className="textoInicio">
     <h1 className="Slogan">
@@ -43,7 +21,7 @@ return (
       <span className="destaque"> por uma</span> cidade mais segura
     </h1>
     <h2 className="frase">
-    {t('frase')}
+  
     Juntos, cooperando para uma cidade mais segura e tranquila para todos.
     </h2>
     </div>
