@@ -21,7 +21,6 @@ return (
       <span className="destaque"> por uma</span> cidade mais segura
     </h1>
     <h2 className="frase">
-  
     Juntos, cooperando para uma cidade mais segura e tranquila para todos.
     </h2>
     </div>

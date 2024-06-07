@@ -22,7 +22,7 @@ Este aplicativo permite que os cidadãos relatem incidentes de segurança em tem
     <div className="topics">
 
         <div className="pag1">
-            <hr />
+            
             <h3 className="title">Colaboração Comunitária</h3>
             Permite que os usuários 
              compartilhem informações e 
@@ -30,9 +30,9 @@ Este aplicativo permite que os cidadãos relatem incidentes de segurança em tem
              colaborando para a segurança 
               da comunidade</div>
 
-        <div className="pag1">
-            <hr />
-            <h3 className="title">Integração com Autoridades Locais</h3>
+        <div className="pag2">
+            
+            <h3 className="title">Integração com Autoridades</h3>
             O Cidade Segura se integra com as 
             autoridades locais, facilitando a 
             comunicação e ação conjunta 
@@ -41,8 +41,8 @@ Este aplicativo permite que os cidadãos relatem incidentes de segurança em tem
             </div>   
         </div>
         <div className="topics">
-        <div className="pag1">
-            <hr />
+        <div className="pag3">
+            
             <h3 className="title">Alertas e Notificações</h3>
             O aplicativo envia alertas e 
             notificações sobre incidentes 
@@ -50,8 +50,8 @@ Este aplicativo permite que os cidadãos relatem incidentes de segurança em tem
             resposta rápida das autoridades 
              e comunidades locais.
         </div>
-        <div className="pag1">
-            <hr />
+        <div className="pag4">
+        
             <h3 className="title">Monitoramento em Tempo Real</h3>
             Os usuários podem visualizar 
             em tempo real as incidências de
