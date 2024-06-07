@@ -15,7 +15,7 @@ import Cadastrar from './routes/Cadastrar/Cadastrar.jsx';
 import Navbar from './assets/components/Navbar/Navbar.jsx';
 import Report from './routes/Report/Report.jsx';
 import PrincipalApp from './routes/TelaPrincipalPosLogin/TelaPrincipal.jsx';
-import './lib/i18n.js';
+import './lib/i18n.ts';
 
 
 const router = createBrowserRouter([

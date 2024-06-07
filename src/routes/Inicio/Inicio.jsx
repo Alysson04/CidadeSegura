@@ -1,5 +1,6 @@
 import React from "react";
 import './Inicio.css';
+import {useState} from 'react'
 
 import Navbar from '../../assets/components/Navbar/Navbar';
 import imagem1 from '../../assets/img/imagem1.jpg'
@@ -14,7 +15,7 @@ const Home = () => {
   const{ t, i18n: {changeLanguage, language} }= useTranslation()
 
 
-  const[currentlanguage, setCurrentLanguage] = useState('en')
+  const[currentlanguage, setCurrentLanguage] = useState(language)
 
   const handleChangeLanguage = () =>{
     const newLanguage = currentlanguage === 'en' ? 'pt' : 'en'
@@ -26,7 +27,7 @@ const Home = () => {
 return (
 <>
 <Navbar/>
-<h1>{t('header')}</h1>
+
 <button type="button" onClick={handleChangeLanguage}>Change Language</button>
 
 
@@ -37,6 +38,7 @@ return (
       <span className="destaque"> por uma</span> cidade mais segura
     </h1>
     <h2 className="frase">
+    {t('frase')}
     Juntos, cooperando para uma cidade mais segura e tranquila para todos.
     </h2>
     </div>
