@@ -7,11 +7,11 @@ import imagem1 from '../../assets/img/imagem1.jpg'
 import imagem2 from '../../assets/img/imagem2.jpg'
 import imagem3 from '../../assets/img/imagem3.jpg'
 import imagem4 from '../../assets/img/imagem4.jpg'
-import { useTranslation } from "react-i18next";
 
 
 
 const Home = () => {
+<<<<<<< HEAD
   const{ t, i18n: {changeLanguage, language} }= useTranslation()
 
 
@@ -30,6 +30,11 @@ return (
 
 <button type="button" onClick={handleChangeLanguage}>Change Language</button>
 
+=======
+return (
+<>
+<Navbar/>
+>>>>>>> parent of 81ec8b3 (tentativa de tradução)
 
         <div className="content">
           <div className="textoInicio">
