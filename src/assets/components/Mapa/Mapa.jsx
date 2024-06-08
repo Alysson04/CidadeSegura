@@ -110,14 +110,9 @@ const Mapa = () => {
   
       <div style={{ marginBottom: '20px' }}>
         <button className="my-location-button" onClick={handleMyLocationClick}>Minha localização atual</button>
-        <button className="geocode-button" onClick={handleGeocode}>Buscar</button>
-        <input
-  type="text"
-  value={destination}
-  onChange={handleDestinationChange}
-  placeholder="Digite o destino"
-  className="input-destination" // Adicione esta linha
-/>
+       
+
+
       </div>
       <div id="map" ref={mapContainerRef} style={{ height: '700px', width: '100%'}}>
 

@@ -16,15 +16,12 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
+import MailIcon from '@mui/icons-material/Mail';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { Button } from '@mui/material';
-import './TelaPrincipal.css';
 import { Link } from "react-router-dom";
-import Mapa from '../../assets/components/Mapa/Mapa.jsx'
-
+import Mapa from '../../assets/components/Mapa/Mapa.jsx';
+import './TelaPrincipal.css';
 
 const drawerWidth = 240;
 
@@ -50,7 +47,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
-    backgroundColor: '#4AB1B8',
+  backgroundColor: '#4AB1B8',
   transition: theme.transitions.create(['margin', 'width'], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -69,7 +66,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
   justifyContent: 'flex-end',
 }));
@@ -88,88 +84,87 @@ export default function PersistentDrawerLeft() {
 
   return (
     <>
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar position="fixed" open={open}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{ mr: 2, ...(open && { display: 'none' }) }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Cidade Segura
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        <AppBar position="fixed" open={open}>
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              sx={{ mr: 2, ...(open && { display: 'none' }) }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" noWrap component="div">
+              Cidade Segura
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Drawer
+          sx={{
             width: drawerWidth,
-            boxSizing: 'border-box',
-          },
-        }}
-        variant="persistent"
-        anchor="left"
-        open={open}
-      >
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <List>
-          {['Meus relatos' , 'Incidentes Proximos', 'Perfil', ].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? < ContentPasteIcon/> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['Configuração'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <SettingsIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-      <Main open={open}>
-        <DrawerHeader />
-        <Typography paragraph>
-        
-        </Typography>
-        <Typography paragraph>
-      
-        </Typography>
-      </Main>
-      
-    </Box>
-    <div>
-      <Mapa/>
-    </div>
-    <div className='divButton'>  <Link to="/Report"> <button className='button'>Reportar</button>
-    </Link></div>
-  
-
-    
-</>
+            flexShrink: 0,
+            '& .MuiDrawer-paper': {
+              width: drawerWidth,
+              boxSizing: 'border-box',
+            },
+          }}
+          variant="persistent"
+          anchor="left"
+          open={open}
+        >
+          <DrawerHeader>
+            <IconButton onClick={handleDrawerClose}>
+              {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            </IconButton>
+          </DrawerHeader>
+          <Divider />
+          <List>
+            {['Meus relatos', 'Incidentes Proximos', 'Perfil'].map((text, index) => (
+              <ListItem key={text} disablePadding>
+                <ListItemButton component={Link} to={`/${text.replace(/\s+/g, '').toLowerCase()}`}>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <ContentPasteIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+          <Divider />
+          <List>
+            {['Alterar idioma'].map((text, index) => (
+              <ListItem key={text} disablePadding>
+                <ListItemButton component={Link} to="/Configuracoes">
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <SettingsIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Drawer>
+        <Main open={open}>
+          <DrawerHeader />
+          <Typography paragraph>
+            {/* Conteúdo principal */}
+          </Typography>
+          <Typography paragraph>
+            {/* Mais conteúdo */}
+          </Typography>
+        </Main>
+      </Box>
+      <div>
+        <Mapa />
+      </div>
+      <div className='divButton'>
+        <Link to="/Report">
+          <button className='button'>Reportar</button>
+        </Link>
+      </div>
+    </>
   );
 }
