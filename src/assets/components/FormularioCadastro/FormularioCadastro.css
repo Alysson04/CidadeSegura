@@ -96,3 +96,10 @@
     color:#fff;
 
 }
+.tipoUser label{
+    color: rgb(255, 255, 255);
+
+}
+.tipoUser{
+    display: flex;
+}

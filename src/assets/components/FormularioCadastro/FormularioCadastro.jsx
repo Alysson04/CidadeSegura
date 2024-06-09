@@ -10,10 +10,14 @@ const Cadastro = () => {
   const[name,setName] = useState("");
   const[cpf,setCpf]= useState("");
   const[data,setData]= useState("");
-  const handleSubmit = (event) => {
+  const[tipoDeUsuario,settipoDeUsuario]=useState("");
+  const handleSubmit = (event) => { 
     event.preventDefault();
      console.log(username, password,name,cpf,data);
     console.log("Envio");
+    if(tipoDeUsuario == "Agente"){
+      fetch("http://localhost:8080/agentes",{method:"post",headers:{"Content-Type":"application/json"},body:JSON.stringify({nome:name,email:username,cpf:cpf,dataDeNascimento:data,senha:password})})
+    }
 
     alert("Enviando os dados: " + username + " - " + password + " - " + name + " - " + cpf + " - " + data );
   };
@@ -22,6 +26,18 @@ const Cadastro = () => {
     <div className="container">
       <form className='form' onSubmit={handleSubmit}>
         <h1>Cadastrar</h1>
+
+        <div className='tipoUser'>
+        <input type="radio" value="Agente" name='tipoDeUsuario' placeholder="Tipo de usuário"
+        onChange={(e) => settipoDeUsuario(e.target.value)}/> 
+        <label htmlFor="tipoDeUsuario">Agente</label>
+        </div>
+
+        <div className='tipoUser'>
+        <input type="radio" value="Civil" name='tipoDeUsuario' placeholder="Tipo de usuário"
+        onChange={(e) => settipoDeUsuario(e.target.value)}/> 
+        <label htmlFor='tipoDeUsuario'>Civil</label>
+        </div>
 
         <div className='input-field'>
         <input type="text" placeholder="Nome"
@@ -53,8 +69,8 @@ const Cadastro = () => {
 
 
 
-
-        <button>Cadastrar</button>
+         
+        <button type='submit'>Cadastrar</button>
 
 
 
