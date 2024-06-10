@@ -14,6 +14,7 @@ const Mapa = () => {
   const [geocodeResults, setGeocodeResults] = useState([]);
   const mapRef = useRef(null);
   const mapContainerRef = useRef(null);
+  var endereco;
 
   useEffect(() => {
     if (!mapRef.current) {
@@ -23,10 +24,24 @@ const Mapa = () => {
           setCurrentPos({ latitude, longitude });
 
           if (!mapRef.current) {
+           
             const map = L.map(mapContainerRef.current).setView([latitude, longitude], 13);
+            map.on("click",(event)=>{var geocoder = L.Control.Geocoder.nominatim();
+              geocoder.reverse(event.latlng,map.options.crs.scale(map.getZoom()), (results) => {
+                console.log(results);
+                if(endereco!=undefined){
+                  map.removeLayer(endereco);
+                }
+               endereco = L.marker(event.latlng).addTo(map);
+               sessionStorage.setItem("endereco",results[0].name)
+              
+               
+              });})
+
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
               attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             }).addTo(map);
+         
 
             mapRef.current = map;
           }

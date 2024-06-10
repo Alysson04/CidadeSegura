@@ -6,20 +6,20 @@ import "./FormularioCadastro.css";
 const Cadastro = () => {
 
   const[username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const[password, setPassword] = useState("");
   const[name,setName] = useState("");
   const[cpf,setCpf]= useState("");
   const[data,setData]= useState("");
-  const[tipoDeUsuario,settipoDeUsuario]=useState("");
+  const[contato,setContato]=useState("");
   const handleSubmit = (event) => { 
     event.preventDefault();
-     console.log(username, password,name,cpf,data);
+     console.log(username, password,name,cpf,data,contato);
     console.log("Envio");
-    if(tipoDeUsuario == "Agente"){
-      fetch("http://localhost:8080/agentes",{method:"post",headers:{"Content-Type":"application/json"},body:JSON.stringify({nome:name,email:username,cpf:cpf,dataDeNascimento:data,senha:password})})
+    {
+      fetch("http://localhost:8080/civis",{method:"post",headers:{"Content-Type":"application/json"},body:JSON.stringify({nome:name,email:username,cpf:cpf,dataDeNascimento:data,senha:password,contato:contato})})
     }
 
-    alert("Enviando os dados: " + username + " - " + password + " - " + name + " - " + cpf + " - " + data );
+    alert("Conta criada com sucesso, retorne a pagina de login para entrar no aplicativo");
   };
  
   return (
@@ -27,17 +27,6 @@ const Cadastro = () => {
       <form className='form' onSubmit={handleSubmit}>
         <h1>Cadastrar</h1>
 
-        <div className='tipoUser'>
-        <input type="radio" value="Agente" name='tipoDeUsuario' placeholder="Tipo de usuário"
-        onChange={(e) => settipoDeUsuario(e.target.value)}/> 
-        <label htmlFor="tipoDeUsuario">Agente</label>
-        </div>
-
-        <div className='tipoUser'>
-        <input type="radio" value="Civil" name='tipoDeUsuario' placeholder="Tipo de usuário"
-        onChange={(e) => settipoDeUsuario(e.target.value)}/> 
-        <label htmlFor='tipoDeUsuario'>Civil</label>
-        </div>
 
         <div className='input-field'>
         <input type="text" placeholder="Nome"
@@ -62,6 +51,12 @@ const Cadastro = () => {
         <div className='input-field'>
         <input type="date" placeholder="Data de nascimento"
         onChange={(e) => setData(e.target.value)}/> 
+
+        </div>
+
+        <div className='input-field'>
+        <input type="text" placeholder="Contato"
+        onChange={(e) => setContato(e.target.value)}/> 
 
         </div>
 

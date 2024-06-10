@@ -16,7 +16,8 @@ import Navbar from './assets/components/Navbar/Navbar.jsx';
 import Report from './routes/Report/Report.jsx';
 import PrincipalApp from './routes/TelaPrincipalPosLogin/TelaPrincipal.jsx';
 import Configuracoes from './routes/Configuracoes/configuracoes.jsx';
-import IncidentesProximos from './routes/IncidentesProximos/incidentesproximos.jsx';
+import { ThemeProvider } from './ThemeContext.jsx';
+
 import MeusRelatos from './routes/MeusRelatos/meusrelatos.jsx';
 import Perfil from './routes/Perfil/perfil.jsx';
 
@@ -66,10 +67,7 @@ const router = createBrowserRouter([
         path:"Configuracoes",
         element: <Configuracoes/>
       },
-      {
-        path:"IncidentesProximos",
-        element: <IncidentesProximos/>
-      },
+    
       {
         path:"MeusRelatos",
         element: <MeusRelatos/>
@@ -86,8 +84,10 @@ const router = createBrowserRouter([
   ],
   );
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-<RouterProvider router={router} /> 
-  </React.StrictMode>,
-)
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+      <ThemeProvider> 
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </React.StrictMode>,
+  );

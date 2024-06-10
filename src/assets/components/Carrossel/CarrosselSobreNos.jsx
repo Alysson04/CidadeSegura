@@ -60,9 +60,9 @@ class CarrosselSobreNos extends React.Component {
           <img src={luiz} className='luiz'></img>
 
             <h3>Luiz</h3>
-            <h3>Idade: 21 anos</h3>
+            <h3>Idade: 20 anos</h3>
             <h3>Cursando Sistemas para internet</h3>
-            <a href='www.linkedin.com/in/alysson-rafael-0941ba1b3'>
+            <a href='https://www.linkedin.com/in/luizhenriqueneto/'>
              <img src={linkedin} className='linkedin'></img>
              </a>
           </div>
@@ -70,9 +70,9 @@ class CarrosselSobreNos extends React.Component {
 
           <img src={carlos}className='carlos'></img>
             <h3>Carlos</h3>
-            <h3>Idade: 21 anos</h3>
+            <h3>Idade: 23 anos</h3>
             <h3>Cursando Sistemas para internet</h3>
-            <a href='www.linkedin.com/in/alysson-rafael-0941ba1b3'>
+            <a href='https://www.linkedin.com/in/eduardo-lima-177w/'>
              <img src={linkedin} className='linkedin'></img>
              </a>
           </div>
@@ -80,9 +80,9 @@ class CarrosselSobreNos extends React.Component {
           <img src={giullia} className='giullia'></img>
 
             <h3>Giullia</h3>
-            <h3>Idade: 21 anos</h3>
+            <h3>Idade: 19 anos</h3>
             <h3>Cursando Sistemas para internet</h3>
-            <a href='www.linkedin.com/in/alysson-rafael-0941ba1b3'>
+            <a href='https://www.linkedin.com/in/giulliavieira/'>
              <img src={linkedin} className='linkedin'></img>
              </a>
           </div>

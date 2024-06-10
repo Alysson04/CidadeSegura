@@ -61,6 +61,7 @@ body{
  
 }
 .imagem3,.imagem4{
+  
   width: 70%;
   height: 50%;
   float: left;
@@ -94,8 +95,8 @@ body{
  
 }
 .t1,.t2{
-  color: #000000;
-  font-size: 300%;
+  font-size:clamp(3rem,3vw + 1rem, 2rem);
+ color: black;
   float: right;
   text-align: right;
   
@@ -103,13 +104,12 @@ body{
 
 }
 .t3,.t4{
-  color: #000000;
-  font-size: 300%;
-  float: left;
+  float:left;
   text-align: left;
+  font-size:clamp(3rem,3vw + 1rem, 2rem);
+  color: black;
 
 }
-
 
 
 

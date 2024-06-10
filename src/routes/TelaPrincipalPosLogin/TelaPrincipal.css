@@ -1,7 +1,7 @@
 .button{
     width: 15%;
     height: 50px;
-    background-color: #fff;
+    background-color: #72b359;
     border: none;
     outline: none;
     border-radius:40px;
@@ -10,8 +10,7 @@
     font-size: 16px;
     font-weight:600;
     text-shadow: none;
-    
-    
+    color: white;
 }
 
 .divButton{

@@ -23,7 +23,11 @@ import { Link } from "react-router-dom";
 import Mapa from '../../assets/components/Mapa/Mapa.jsx';
 import './TelaPrincipal.css';
 
+
+
+
 const drawerWidth = 240;
+
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
@@ -122,7 +126,7 @@ export default function PersistentDrawerLeft() {
           </DrawerHeader>
           <Divider />
           <List>
-            {['Meus relatos', 'Incidentes Proximos', 'Perfil'].map((text, index) => (
+            {['Meus relatos', 'Perfil'].map((text, index) => (
               <ListItem key={text} disablePadding>
                 <ListItemButton component={Link} to={`/${text.replace(/\s+/g, '').toLowerCase()}`}>
                   <ListItemIcon>

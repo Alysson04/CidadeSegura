@@ -1,20 +1,41 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import "./FormularioLogin.css";
-import { Link } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 
 const FormularioLogin = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate=useNavigate()
 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
    
     event.preventDefault();
 
    
     console.log("Dados de Login:", { username, password });
+    const resposta = await fetch("http://localhost:8080/civis")
+    const arrayContas = await resposta.json();
+    const conta = arrayContas.find((conta)=>conta.email==username)
+    console.log(conta)
+    if(conta==undefined){
+      alert("Conta não cadastrada")
+
+    }else{
+      conta.senha==password;
+      if(conta.senha==password){
+        sessionStorage.setItem("usuario",conta.id)
+       navigate("/PrincipalApp",{replace:true})
+
+      }else{
+        alert("A senha está incorreta")
+      }
+    }
+    
+
+
   };
 
   return (
@@ -49,8 +70,8 @@ const FormularioLogin = () => {
           </label>
           <a href="#">Esqueceu sua senha?</a>
         </div>
-        <Link to="/PrincipalApp"> <button type="submit">Entrar</button>
-</Link>
+        <button type="submit">Entrar</button>
+         
         <div className="signup-link">
           <p>
             Não tem uma conta? <a href="#">Registar</a>{" "}
