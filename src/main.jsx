@@ -16,10 +16,11 @@ import Navbar from './assets/components/Navbar/Navbar.jsx';
 import Report from './routes/Report/Report.jsx';
 import PrincipalApp from './routes/TelaPrincipalPosLogin/TelaPrincipal.jsx';
 import Configuracoes from './routes/Configuracoes/configuracoes.jsx';
-import { ThemeProvider } from './ThemeContext.jsx';
+
 
 import MeusRelatos from './routes/MeusRelatos/meusrelatos.jsx';
 import Perfil from './routes/Perfil/perfil.jsx';
+import { ThemeProvider } from './ThemeContext.jsx';
 
 
 
