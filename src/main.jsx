@@ -15,7 +15,7 @@ import Cadastrar from './routes/Cadastrar/Cadastrar.jsx';
 import Navbar from './assets/components/Navbar/Navbar.jsx';
 import Report from './routes/Report/Report.jsx';
 import PrincipalApp from './routes/TelaPrincipalPosLogin/TelaPrincipal.jsx';
-import Configuracoes from './routes/Configuracoes/configuracoes.jsx';
+
 
 
 import MeusRelatos from './routes/MeusRelatos/meusrelatos.jsx';
@@ -64,10 +64,7 @@ const router = createBrowserRouter([
         element: <Report/>
 
       },
-      {
-        path:"Configuracoes",
-        element: <Configuracoes/>
-      },
+    
     
       {
         path:"MeusRelatos",
